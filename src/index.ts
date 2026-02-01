@@ -91,3 +91,9 @@ if (isMain) {
     process.exit(1);
   });
 }
+export default {
+  async fetch(request: Request, env: any, ctx: ExecutionContext) {
+    // Let OpenClaw handle everything internally
+    return new Response("OpenClaw is running");
+  },
+};
